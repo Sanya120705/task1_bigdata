@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv("mydata.csv")
+print(df.head())
+print("Total rows:", len(df))
+print("Schema:")
+print(df.dtypes)
+print("Average Age:", df["age"].mean())
+print("Count per country:")
+print(df["country"].value_counts())
+df.to_csv("output_task1.csv",index=False)
